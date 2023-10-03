@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: #3c3a3a;
+
+}  
+#gameboard{
+    width:315px;
+    height: 315px;
+    background-color: #a09f9f;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    border-radius: 5px;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    background-color:   #3c3a3a;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 15px solid rgb(1, 1, 1);
+    
+}
+.cross{
+    height: 90px;
+    width: 90px;
+    position: relative;
+}
+.cross:before,.cross:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(60, 0, 0);
+    transform: rotate(45deg);
+}
+.cross:before {
+    left:50%;
+    width:20%;
+    margin-left: -10%;
+    height:100%;
+}
+
+.cross:after {
+    top:50%;
+    height:20%;
+    margin-top: -10%;
+    width :100%;
+}
+
+.win{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 50px;
+}
+.fire{
+    color: rgb(164, 123, 40) ;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 50px;
+}
+#reloadButton{
+    display: none ;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(113, 99, 189) ;  
+    width: 100px;
+    height: 50px;  
+}
+p{
+    display: inline;
+}
+.informations{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+#info{
+    color: aliceblue;
+}
